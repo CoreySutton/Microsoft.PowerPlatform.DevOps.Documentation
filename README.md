@@ -67,8 +67,7 @@ You can find detailed explanation of each file and its configuration here:
 | File                                | Description                                                  |
 | ----------------------------------- | ------------------------------------------------------------ |
 | [build.yaml](3%20Files/build.yaml.md) | Defines the Azure DevOps pipeline including build, test and deployment stages |
-|                                     |                                                              |
-|                                     |                                                              |
-|                                     |                                                              |
-|                                     |                                                              |
+| [config.json](3%20Files/config.json.md) | Defines configuration properties for a specific solution.<br>Consumed by the PowerShell scripts. |
+| [deployPackages.json](3%20Files/deployPackages.json.md) | Defines which Dataverse solutions are deployed, to which Dataverse environments, and how (data migration, pre actions and post actions) |
+| [project.json](3%20Files/project.json.md) | Configuration file used by the module to determine which solutions are prepared for export and import |
 
