@@ -66,7 +66,7 @@ You can find detailed explanation of each file and its configuration here:
 
 | File                                | Description                                                  |
 | ----------------------------------- | ------------------------------------------------------------ |
-| [build.yaml](3 Files/build.yaml.md) | Defines the Azure DevOps pipeline including build, test and deployment stages |
+| [build.yaml](3%20Files/build.yaml.md) | Defines the Azure DevOps pipeline including build, test and deployment stages |
 |                                     |                                                              |
 |                                     |                                                              |
 |                                     |                                                              |
