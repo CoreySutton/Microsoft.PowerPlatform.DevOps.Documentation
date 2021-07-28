@@ -2,13 +2,41 @@
 
 [For a detailed instruction on the toolset, link via 365.training](https://365.training/Player/VideoPlayer/8e5e028b-bb03-4c27-bba3-8e3edda5c76e/b4b58a35-9209-eb11-a813-000d3a58ba85)
 
-### Prerequisites:
+## 1 Prerequisites:
 
-* PowerShell minimum version [TBC]
+```
+This needs to be refined to include links to relevant MS docs to set these things up.
+Need to define which are optional
+```
+
 * Administrative access on your installation device
+* PowerShell
+  * Minimum version 5.x 
+  * Ability to run PowerShell as an administrator on your installation device
+  * [🔗 Install PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1) 
+* Azure DevOps
+  * A member of the Project Administrator team (or greater)
+  * [🔗 Microsoft Docs - Azure DevOps Administrator Management](https://docs.microsoft.com/en-us/azure/devops/user-guide/project-admin-tutorial?view=azure-devops)
+* Microsoft 365
+  * Permissions to create Dataverse environments
+* Dataverse
+  * System Administrator in your Dataverse environment(s) 
+  * [🔗 Microsoft Docs - Create Environment](https://docs.microsoft.com/en-us/power-platform/admin/create-environment)
+* If using Azure KeyVault and/or Service Principles you need contributor or administrator access in Azure
+  * KeyVault must be configured before using the tool to create
+* Configure application user in DataVerse Environments
 
-## Setup
+## 2 Install the PowerShell Module and Run Pre-Requisites Check
 
+The follow should be ran the first time you install the module on your machine.
+
+| # | Action | PowerShell Cmdlet | Steps |
+|--|--|--|--|
+| 1 | Installing the module | `Install-Module -Name Microsoft.PowerPlatform.DevOps` | 1. Run 'Windows PowerShell' as an administrator<br>2. Run the cmdlet <br>_Note: Other installation methods can be found at https://www.powershellgallery.com/packages/Microsoft.PowerPlatform.DevOps_ |
+| 2 | Open the module       | `Invoke-PowerPlatformDevOps` | 1. Run the cmdlet <br>_Note: It is recommended that you open PowerShell as administrator_ |
+| 3 | Run pre-requisites  | `1: Run Pre-requisite checks (Install / Update)`      | Run the pre requisite checks by entering option `1` and pressing `<Enter>`<br>![main-menu.png](images/main-menu.png) |
+
+## 3 Invoking and Updating the Module
 | Action | PowerShell Cmdlet | Steps |
 |--|--|--|
 | **Installing the module** | `Install-Module -Name Microsoft.PowerPlatform.DevOps` | 1. Run 'Windows PowerShell' as an administrator<br>2. Run the cmdlet <br>_Note: Other installation methods can be found at https://www.powershellgallery.com/packages/Microsoft.PowerPlatform.DevOps_ |
@@ -17,7 +45,7 @@
 | **Update your version** | `Update-Module Microsoft.PowerPlatform.DevOps` | 1. Run the cmdlet |  |
 | **Update your version** | `[U]` | 1. `Invoke-PowerPlatformDevOps` <br>2. Select `[U]` to Update your tool |  |
 
-## Using the tool
+## 4 Using the tool
 
 | # | Step | Description |
 |--|--|--|
@@ -36,31 +64,7 @@
 | U | Check for [U]pdates to Microsoft.PowerPlatform.DevOps |
 | Q | Press 'Q' to quit |
 
-
-### 2 Create a New Project or Select an Existing One
-
-| Option | Description |
-|--|--|
-| Select an existing project | Connect to an existing local project repository you have previously connected to in the past |
-| Browse for local repository | Connect to an existing local project repository by browsing your file directory |
-| Create a new project | Create and connect a new local project repository |
-| Clone an existing repo | Clone an existing repository from Azure DevOps |
-
-### 3 Configure Azure DevOps
-
-| Step | Description | Input |
-|--|--|--|
-| 1 | Enter your Azure DevOps organisation (e.g. dev.azure.com/**testingOrg**) | testingOrg |
-| 2 | Select  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-
-Once connected (ADO Org: testingOrg | ADO Project: sampleProject | git Repo: myProject )
-
-
-
-# Files
+## Files
 
 You can find detailed explanation of each file and its configuration here:
 
